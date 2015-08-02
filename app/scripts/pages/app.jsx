@@ -1,6 +1,7 @@
 import React from 'react';
 import { RouteHandler } from 'react-router';
 import Header from '../components/header.jsx'
+import Search from '../components/search.jsx'
 
 class App extends React.Component {
   
@@ -8,6 +9,7 @@ class App extends React.Component {
     return (
       <div>
         <Header />
+        <Search />
         <div className="content">
           <RouteHandler/>
         </div>

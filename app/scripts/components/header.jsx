@@ -10,7 +10,7 @@ class Header extends React.Component{
   render() {
     return (
       <header className="clearfix">
-        Application Name
+        Hobao Demo app
 
         <nav className="clearfix">
           <div className="nav-item">
