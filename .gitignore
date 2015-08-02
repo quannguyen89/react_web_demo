@@ -3,3 +3,12 @@ dist
 app/bower_components
 app/bundles
 *.log
+.idea/.name
+.idea/demo_webapp.iml
+.idea/jsLibraryMappings.xml
+.idea/libraries/demo_webapp_node_modules.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
+.idea/watcherTasks.xml
