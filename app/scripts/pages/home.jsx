@@ -1,7 +1,10 @@
 import React from 'react';
-import ItemList from '../components/itemList.jsx';
-import ItemStore from '../stores/itemStore';
+import Reflux from 'reflux';
+import HouseList from '../components/houseList.jsx';
+import ItemStore from '../stores/houseStore';
 import ItemActions from '../actions/itemActions';
+import reactMixin from 'react-mixin';
+
 
 class Home extends React.Component {
   
@@ -14,12 +17,8 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
-    this.unsubscribe = ItemStore.listen(this.onStatusChange.bind(this));
+    this.listenTo(ItemStore, this.onStatusChange);
     ItemActions.loadItems();
-  }
-
-  componentWillUnmount() {
-    this.unsubscribe();
   }
 
   onStatusChange(state) {
@@ -27,14 +26,19 @@ class Home extends React.Component {
   }
 
   render() {
-
     return (
-      <div>
-        <h1>Home Area</h1>
-        <ItemList { ...this.state } />
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-md-8 map">
+            Map
+          </div>
+          <HouseList {...this.state}>
+            House List
+          </HouseList>
+        </div>
       </div>
     );
   }
 }
-
+reactMixin(Home.prototype, Reflux.ListenerMixin);
 export default Home;

@@ -19,8 +19,8 @@ class Search extends React.Component {
             </div>
         );
     }
-
 }
+
 reactMixin(Search.prototype, React.addons.LinkedStateMixin);
 
 export default Search;

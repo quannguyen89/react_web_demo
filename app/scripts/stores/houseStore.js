@@ -1,7 +1,7 @@
 import Reflux from 'reflux';
 import ItemActions from '../actions/itemActions';
 
-var ItemStore = Reflux.createStore({
+var HouseStore = Reflux.createStore({
 
   init() {
     this.items = [];
@@ -35,4 +35,4 @@ var ItemStore = Reflux.createStore({
 
 });
 
-export default ItemStore;
+export default HouseStore;
