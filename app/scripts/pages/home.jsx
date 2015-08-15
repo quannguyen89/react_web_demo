@@ -1,6 +1,7 @@
 import React from 'react';
 import Reflux from 'reflux';
 import HouseList from '../components/houseList.jsx';
+import Map from '../components/map.jsx';
 import ItemStore from '../stores/houseStore';
 import ItemActions from '../actions/itemActions';
 import reactMixin from 'react-mixin';
@@ -29,9 +30,7 @@ class Home extends React.Component {
     return (
       <div className="container-fluid">
         <div className="row">
-          <div className="col-md-8" id="map">
-            Map
-          </div>
+          <Map></Map>
           <HouseList {...this.state}>
             House List
           </HouseList>
