@@ -52,7 +52,8 @@
     "reflux": "^0.2.7",
     "bootstrap": "^3.3.5",
     "font-awesome": "^4.4.0",
-    "bootswatch": "^3.3.5"
+    "bootswatch": "^3.3.5",
+    "leaflet": "^1.0.0-beta.1"
   },
   "jest": {
     "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",

@@ -29,7 +29,7 @@ class Home extends React.Component {
     return (
       <div className="container-fluid">
         <div className="row">
-          <div className="col-md-8 map">
+          <div className="col-md-8" id="map">
             Map
           </div>
           <HouseList {...this.state}>
