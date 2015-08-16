@@ -20,6 +20,8 @@ class Home extends React.Component {
   componentDidMount() {
     this.listenTo(ItemStore, this.onStatusChange);
     ItemActions.loadItems();
+
+
   }
 
   onStatusChange(state) {
@@ -30,7 +32,7 @@ class Home extends React.Component {
     return (
       <div className="container-fluid">
         <div className="row">
-          <Map></Map>
+          <Map {...this.state}></Map>
           <HouseList {...this.state}>
             House List
           </HouseList>
