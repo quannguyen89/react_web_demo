@@ -9,8 +9,6 @@ var HouseStore = Reflux.createStore({
     this.listenTo(ItemActions.loadItems, this.loadItems);
     this.listenTo(ItemActions.loadItemsSuccess, this.loadItemsSuccess);
     this.listenTo(ItemActions.loadItemsError, this.loadItemsError);
-    this.listenTo(ItemActions.loadMapData, this.loadMapData);
-    this.listenTo(ItemActions.loadMapDataSuccess, this.loadMapDataSuccess);
   },
 
   loadItems() {
@@ -33,22 +31,7 @@ var HouseStore = Reflux.createStore({
       error : error,
       loading: false
     });
-  },
-
-  loadMapData() {
-    this.trigger({
-      loading: false
-    });
-  },
-
-  loadMapDataSuccess(data) {
-    this.data = data;
-    this.trigger({
-      data : this.data,
-      loading: false
-    });
   }
-
 
 });
 
