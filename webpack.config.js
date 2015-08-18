@@ -17,8 +17,8 @@ module.exports.getConfig = function(type) {
             },
                 {test: /\.(svg|eot|woff|ttf|png|ico|woff2)(\?.*)?$/, loader: 'file-loader'},
                 {test: /\.css$/, loader: 'style-loader!css-loader'},
-                {test: /\.less$/, loader: 'style-loader!css-loader!less-loader'}
-
+                {test: /\.less$/, loader: 'style-loader!css-loader!less-loader'},
+                {test: /\.scss/, loader: 'style!css!sass'}
             ]
         }
     };
