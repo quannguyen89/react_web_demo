@@ -13,6 +13,14 @@ class Map extends React.Component {
         super();
     }
 
+    shouldComponentUpdate(nextProps, nextState) {
+        if (this.props.items !== nextProps.items) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     componentDidUpdate() {
         if (this.props.items && this.props.items.length > 0) {
             L.Icon.Default.imagePath =  'http://api.tiles.mapbox.com/mapbox.js/v1.0.0beta0.0/images';
@@ -54,7 +62,7 @@ class Map extends React.Component {
 
     render() {
         return (
-            <div id="map" className="col-md-8">
+            <div id="map">
             </div>
         );
     }

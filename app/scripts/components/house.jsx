@@ -1,4 +1,6 @@
 import React from 'react';
+import ItemActions from '../actions/itemActions';
+
 class House extends React.Component {
 
     constructor() {
@@ -9,11 +11,16 @@ class House extends React.Component {
         return this.props.house.type === 'House for sale' ? 'sale' : 'move'
     }
 
+    handleClick() {
+        // Need to pass house id here
+        ItemActions.loadHouseDetail();
+    }
+
     render() {
         return (
             <article className="row">
                 <figure data-photourl={this.props.house.thumbnail} className="col-md-3">
-                    <img src={this.props.house.thumbnail} alt={this.props.house.address}/>
+                    <img onClick={this.handleClick} src={this.props.house.thumbnail} alt={this.props.house.address}/>
                 </figure>
                 <div className="property-info col-md-9">
                     <strong>

@@ -3,7 +3,9 @@ import Reflux from 'reflux';
 var ItemActions = Reflux.createActions([
   'loadItems',
   'loadItemsSuccess',
-  'loadItemsError'
+  'loadItemsError',
+  'loadHouseDetail',
+  'loadHouseDetailSuccess',
 ]);
 
 ItemActions.loadItems.preEmit = function(data){
@@ -16,6 +18,26 @@ ItemActions.loadItems.preEmit = function(data){
     // on error
     // ItemActions.loadItemsError('an error occured');
   },500);
+};
+
+ItemActions.loadHouseDetail.preEmit = function(data){
+  // make your api call/ async stuff here
+  // we use setTimeout for faking async behaviour here
+  setTimeout(function(){
+    var houseDetail = {
+      address: '589 Coleridge Ave, Palo Alto, CA',
+      type: 'House for sale',
+      price: 8950000,
+      properties: ['3 bds', '3.5 ba', '4464 sqft', '0.28 ac lot', 'Built 1997'],
+      publishFrom: 104,
+      thumbnail: 'http://photos2.zillowstatic.com/p_g/ISpxm1nzj9y1xo1000000000.jpg',
+      location: [21.009326, 105.857682]
+    };
+    ItemActions.loadHouseDetailSuccess(houseDetail);
+
+    // on error
+    // ItemActions.loadItemsError('an error occured');
+  },800);
 };
 
 
