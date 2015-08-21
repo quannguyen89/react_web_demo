@@ -5,7 +5,8 @@ var ItemActions = Reflux.createActions([
   'loadItemsSuccess',
   'loadItemsError',
   'loadHouseDetail',
-  'loadHouseDetailSuccess'
+  'loadHouseDetailSuccess',
+  'closeDetail'
 ]);
 
 ItemActions.loadItems.preEmit = function(data){

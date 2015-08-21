@@ -60,6 +60,7 @@
     "react-loader": "^1.4.0",
     "react-picture-show": "^1.3.0",
     "react-router": "^0.13.2",
+    "react-star-rating": "^1.3.2",
     "reflux": "^0.2.7"
   },
   "jest": {

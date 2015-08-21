@@ -11,6 +11,7 @@ var HouseStore = Reflux.createStore({
     this.listenTo(ItemActions.loadItemsError, this.loadItemsError);
     this.listenTo(ItemActions.loadHouseDetail, this.loadHouseDetail);
     this.listenTo(ItemActions.loadHouseDetailSuccess, this.loadHouseDetailSuccess);
+    this.listenTo(ItemActions.closeDetail, this.closeDetail);
   },
 
   loadItems() {
@@ -46,6 +47,14 @@ var HouseStore = Reflux.createStore({
     this.trigger({
       loadingHouseDetail: false,
       houseDetail
+    });
+  },
+
+  closeDetail() {
+    this.houseDetail = null;
+    this.trigger({
+      items : this.items,
+      loading: false
     });
   }
 });
