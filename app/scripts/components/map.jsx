@@ -40,7 +40,8 @@ class Map extends React.Component {
             });
 
             var markers = this.props.items.map(function(item) {
-                return L.marker(item.location, { icon: myIcon }).bindLabel(item.price,  { noHide: true, direction: 'auto' }).addTo(map);
+                var location = [item.location.latitude, item.location.longtitude];
+                return L.marker(location, { icon: myIcon }).bindLabel(item.price,  { noHide: true, direction: 'auto' }).addTo(map);
             });
 
 

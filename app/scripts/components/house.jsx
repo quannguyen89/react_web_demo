@@ -19,8 +19,8 @@ class House extends React.Component {
     render() {
         return (
             <article className="row">
-                <figure data-photourl={this.props.house.thumbnail} className="col-md-3">
-                    <img onClick={this.handleClick} src={this.props.house.thumbnail} alt={this.props.house.address}/>
+                <figure data-photourl={this.props.house.thumbnail.url} className="col-md-3">
+                    <img onClick={this.handleClick} src={this.props.house.thumbnail.url} alt={this.props.house.address}/>
                 </figure>
                 <div className="property-info col-md-9">
                     <strong>
@@ -33,6 +33,9 @@ class House extends React.Component {
                     </dt>
                     <dt className="price">
                         <span>${this.props.house.price}</span>
+                    </dt>
+                    <dt className="properties">
+                        <span>${this.props.house.properties}</span>
                     </dt>
                     <dt className="publish-from">
                         <span>{this.props.house.publishFrom} days on Hobao</span>

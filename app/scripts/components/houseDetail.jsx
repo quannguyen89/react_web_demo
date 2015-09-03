@@ -22,7 +22,7 @@ class HouseDetail extends React.Component {
                 (
                     <div className="agent row">
                         <div className="col-md-4">
-                            <img src={agent.avatar} alt=""/>
+                            <img src={agent.avatar.url} alt="No image"/>
                         </div>
                         <div className="col-md-8">
                             <h4 className="agent-name">{agent.name}</h4>
@@ -42,7 +42,7 @@ class HouseDetail extends React.Component {
     render() {
         if (this.props.house) {
             var houseImgs = this.props.house.photos.map(photo =>
-                    <img src={photo} />
+                    <img src={photo.url} />
             );
             var agents = this.renderAgents();
         }

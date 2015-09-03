@@ -52,6 +52,7 @@
     "bootstrap": "^3.3.5",
     "bootswatch": "^3.3.5",
     "font-awesome": "^4.4.0",
+    "jquery": "^2.1.4",
     "leaflet": "^1.0.0-beta.1",
     "leaflet-label": "^0.2.1-0",
     "leaflet.label": "leaflet/Leaflet.label",
